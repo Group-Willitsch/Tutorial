@@ -113,16 +113,18 @@ class InstrumentManager:
 	def set_FAG(self, FAG, Waveform, Voltage, Frequency, Output):
 		print('=========')
 		# DSP.write(f"SYSTem:REMote")
-		FAG.write(f"OUTPut {Output}")
+		FAG.write(f"OUTPut1 {Output}")
+		FAG.write(f"FM:STATe ON")
 		FAG.write(f"VOLTage {Voltage}")
 		FAG.write(f'FUNCtion {Waveform}')
 		FAG.write(f'FREQuency {Frequency}')
-		print(FAG.read())
+
+		FAG.write(f"OUTPut2 {Output}")
 		
 # MAIN PROGRAM
 Instruments = InstrumentManager()
 
 AWG, AFG, DSP, FAG, TAC = Instruments.connect_to_devices()
-Instruments.set_DSP(DSP, 1, 1)
+# Instruments.set_DSP(DSP, 1, 1)
 Instruments.set_FAG(FAG, 'SIN', 5, 422500, 'ON')
 Instruments.close_connection(AWG, AFG, DSP, FAG, TAC)
