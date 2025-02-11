@@ -30,7 +30,7 @@ print(result)
 print(np.mean(result),np.std(result))
 
 ### Save throws in a separate file
-# two strageties :
+# two strategies :
 # native python outout
 # numpy save
 
@@ -59,22 +59,15 @@ np.savez(filename,
 # If you later want to open this file in another program
 
 # open any text file
+# using numpy loadtxt function
 i,a = np.loadtxt(filename+'.dat',
                 skiprows = 0, usecols=(0,1),
                 delimiter = ';',
                 unpack=True)
 print(a)
 
-with np.load(filename+'.npz') as data:
-    a = data['result']
-    b = data['result_mean']
-    c = data['result_std']
-
-print(a)
-print(b,c)
-
-# open npz file
-
+# or numpy load function
+# if you saved using numpy savez function
 with np.load(filename+'.npz') as data:
     a = data['result']
     b = data['result_mean']
