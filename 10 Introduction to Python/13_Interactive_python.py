@@ -7,23 +7,24 @@
 # By Adrien Poindron, 2024/09/17
 #
 # This is a tutorial on how to use interactive python
-# in your programming environment. (Visual Studio,
+# in your programming environment. (Visual Studio Code,
 # VScodium, Spyder ...)
+
+# Open this file in your editor.
 #
-# Open your new file, tuto.py. Note this is the extension
-# for python and note the extension for interactive
-# notebook (.ipynb) such as for jupyter notebook.
+# In interactive python, you can write code in cells.
+# Cells are blocks of code that can be executed independently.
+# They are identified by special markers (#%%).
 #
-# Write your program (See below). Execute the whole
-# program or each of its cell. A cell is delimited
-# by a set of #%% on top and to the bottom of it.
-#
-# When executing the cell its outcome shows up in the
-# right part of the programming environment (Spyder style).
-#
+# Cells are useful to organize your code and
+# to test small parts of your code without running
+# the whole program.
+# But this is still a python program (.py) so you can
+# run it as a whole if you want.
+
+
 # Start by running the cell below and carry on by reading the comments.
-# To run the cell, place ce caret in the cell you want to execute
-# by clinking anywhere in the cell.
+# To run the cell, place the caret in the cell you want to execute.
 #
 # Then press ctrl+enter to only run the cell
 # or press shift+enter to run the cell and move to the next
@@ -34,10 +35,16 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+#%%
+
+my_interesting_variable = 42
+print('The answer to the ultimate question of life, the universe and everything is', my_interesting_variable)
+print()
+
 #%% [markdown]
 
-# An example of markdown cell
-# That is used to explain the code with plain text, equations, links ...
+# An example of markdown cell that is used to explain
+# a program with plain text, equations, links ...
 #
 # Let us consider a 1D harmonic oscillator
 #
@@ -61,5 +68,10 @@ x = np.linspace(0,1000)
 y = np.linspace(0,1000)
 
 plt.plot(x,y)
+plt.grid()
+plt.title('A simple plot')
+plt.xlabel('x axis')
+plt.ylabel('y axis')
+
 # %%
 
