@@ -4,77 +4,24 @@
 #                        Tutorial                         #
 #                                                         #
 ###########################################################
-# By Adrien Poindron, 2024/09/17
+# By Adrien Poindron, 2025/11/10
 #
 # This is a tutorial to get started in python.
 #
-# The elementary features are presented here.
-
-###########################################################
-# Defining variables can be done anywhere in the code
-# No need to declare the type (int, float, str, list, ...)
-
-# initialise a variable
-my_integer = 50
-my_float = 3.1415926
-
-# a list
-my_list = [1, 5, 2, 3, 4]
-
-###########################################################
-# To understand your program, debug it, read data, etc.
-# you can display many things
-
-# Displaying the value of a variable
-print('Display values of variables:')
-print(my_integer)
-print(my_float)
-print(my_list)
-
-# You can also display the type of a variable
-print('Display type of variables:')
-print(type(my_integer))
-print(type(my_float))
-print(type(my_list))
-
-# You can also display the length of a list
-print('Display length of a list:')
-print(len(my_list))
-
-print('Different displays of a list:')
-# You can also display the value of a list at a specific index
-print(my_list[0])
-# You can also look at a slice of a list
-print(my_list[1:3])
-# Or loop over all the elements, one by one
-for element in my_list:
-    print(element)
-
-print('Display the last element of the list:')
-# You can also find the index of an element in a list
-print(my_list.index(5))
-
-###########################################################
-# You are instered in modifying a list
-
-print('Append 6 to the list:')
-# You can also add an element to a list
-my_list.append(6)
-print(my_list)
-
-print('Remove 6 from the list:')
-# You can also remove an element from a list
-my_list.remove(6)
-print(my_list)
-
-# There are many other things you can do with lists
-# You can find all the methods available for a list by typing
-# help(list)
+# Outline
+# 6. Control structures
+# 7. Functions
+# 8. Modules and packages
+# 9. File handling
+# 10. Error handling
+# 11. Useful libraries
 
 ###########################################################
 # Control structures may be interesting to you
 # they allow you to make decisions in your code
 # For instance, you can use if statements
+
+my_list = [1, 2, 3, 4, 5]
 
 print('Use if statements:')
 # You can use if statements to make decisions
