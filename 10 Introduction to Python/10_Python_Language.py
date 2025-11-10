@@ -60,12 +60,14 @@
 
 # 3. Basic syntax
 
+
+# You should see some text in the terminal when you execute this program:
 print('Hello World! This is my first python program.')
 print('Let us learn python together!')
 print()
 
 # Here we go with the basics of python.
-# It is orientated to beginners that come from scientific background.
+# It is orientated to beginners that come from a scientific background.
 
 ###########################################################
 # Defining variables can be done anywhere in the code
@@ -91,7 +93,7 @@ print(my_integer)
 print(my_float)
 print()
 
-# Now my_float is a string and not a float anymore !
+print('Now my_float is a string and not a float anymore !')
 
 # 4. Variables and types
 
@@ -112,6 +114,13 @@ print()
 my_list = [1, 5, 2, 3, 4]
 my_tuple = (10, 20, 30)
 
+# you can print a list or a tuple
+print('Display a list:')
+print(my_list)
+print('Display a tuple:')
+print(my_tuple)
+print()
+
 # You can display the length of a list or tuple
 print('Display length of a list:')
 print(len(my_list))
@@ -124,12 +133,15 @@ print('Different displays of a list:')
 print(my_list[0])
 # You can also look at a slice of a list
 print(my_list[1:3])
+print()
 # Or loop over all the elements, one by one
 for element in my_list:
     print(element)
+print()
 
 print('Display the last element of the list:')
 print(my_list[-1])
+print()
 
 # You can also find the index of an element in a list
 print(my_list.index(5))
@@ -155,6 +167,7 @@ print('Remove 6 from the list:')
 # You can also remove an element from a list
 my_list.remove(6)
 print(my_list)
+print()
 
 # There are many other things you can do with lists
 # You can find all the methods available for a list by typing
