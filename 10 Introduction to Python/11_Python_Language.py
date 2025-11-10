@@ -152,3 +152,24 @@ print(f'my_list[2] = {my_list[2]:08.2f}')
 # f-string in scientific notation with 3 leading zeros and 7 digits in total
 print(f'my_float = {my_float:.3e}')
 print()
+
+# You can also use f-strings to create strings
+print('Create strings using f-strings:')
+filename = f'result_{my_integer}_{my_float:.2f}.txt'
+print(f'Generated filename: {filename}')
+print()
+# That is very useful to create filenames with variable values in them
+# You can also use f-strings to do calculations inside the string
+print('Do calculations inside f-strings:')
+print(f'The sum of {my_integer} and {my_float:.2f} is {my_integer + my_float:.2f}')
+print()
+# That is very useful to display results of calculations directly
+# without having to create intermediate variables
+
+###########################################################
+
+# End of the tutorial
+# You can follow the next step to learn more about Python
+# by going to the "Intermediate Python" tutorial you will see more sophisticated programs.
+# Thank you for reading this tutorial !
+
