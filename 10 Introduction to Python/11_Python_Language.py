@@ -169,7 +169,28 @@ print()
 ###########################################################
 
 # End of the tutorial
-# You can follow the next step to learn more about Python
-# by going to the "Intermediate Python" tutorial you will see more sophisticated programs.
-# Thank you for reading this tutorial !
 
+# Keep in mind that this is just a brief introduction to Python.
+# Python is a very rich language with many libraries and features.
+# You can explore more advanced topics such as:
+# - Object-oriented programming
+# - Functional programming
+# - Data analysis with pandas
+# - Scientific computing with NumPy and SciPy
+# - Machine learning with scikit-learn and TensorFlow
+# - Web development with Django and Flask
+# - And much more!
+
+# Feel free to explore Python further on your own.
+# Resources on the web, books, and online courses can help you deepen your knowledge.
+# They will help you learn far better than using AI tools.
+
+# If you are more interested in scientific programming,
+# you can explore two other tutorials that are available:
+# - "Interactive Python" that shows you how to use interactive python in your programming environment.
+# - "Jupyter Notebooks" that shows you how to use Jupyter notebooks for your scientific programming.
+# That is very convenient to mix code, text, equations and plots in a single document.
+#
+# Then for applications to scientific needs you can go to the "Intermediary Python" tutorial.
+#
+# Thank you for reading this tutorial !
