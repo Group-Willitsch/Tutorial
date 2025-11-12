@@ -28,18 +28,17 @@ def state_plotter(times, states, fig_num):
 
 
 # %% Define derivative function
-def f(t, y, c):
-    print(t)
-    dydt = [y[1], y[2], c[0]]
+def f(t, y):
+    # print(t)
+    dydt = [y[1], y[2], 0]
     return dydt
 
 # %% Define time spans, initial values, and constants
-tspan = np.linspace(0, 8, 50)
-yinit = [6, 2, -4]
-c = [9.8066]
+tspan = np.linspace(0, 10, 100)
+yinit = [0, 1, -9.8066]
 
 # %% Solve differential equation
-sol = solve_ivp(lambda t, y: f(t, y, c), 
+sol = solve_ivp(lambda t, y: f(t, y), 
                 [tspan[0], tspan[-1]],
                 yinit,
                 method = 'RK23',
@@ -58,7 +57,7 @@ state_plotter(sol.t, sol.y, 1)
 
 # %% Define derivative function
 def f(t, y, potato):
-    print(t)
+    # print(t)
     dydt = [y[1], -y[0] * (2*np.pi)**2]
     return dydt
 
