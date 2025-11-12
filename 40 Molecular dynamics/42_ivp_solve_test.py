@@ -36,7 +36,7 @@ def f(t, y, c):
 # %% Define time spans, initial values, and constants
 tspan = np.linspace(0, 8, 50)
 yinit = [6, 2, -4]
-c = [1.3]
+c = [9.8066]
 
 # %% Solve differential equation
 sol = solve_ivp(lambda t, y: f(t, y, c), 
@@ -85,3 +85,5 @@ state_plotter(sol.t, sol.y, 1)
 
 print(np.shape(sol.y))
 print(sol)
+
+# %%
