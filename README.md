@@ -24,9 +24,11 @@ The possibility to create branches should not be used recklessly (wow !). It is 
 
 ### Recommendations
 
-Each GitHub repository should contain a documentation. A `README.md` explaining the purpose of the program and its main characteristics can serve as a documentation. What you are reading is an example of `README.md`.
+One commit should cover one change and have an explicit comment. This makes tracking change and reverting them a confortable experience. If you change 20 things and do one commit with an oblivious name such as 'update' then good luck with correcting your mistakes afterwards.
 
-There are few security concerns regarding the use of repositories. Every change is visible by the users of the repository and they can be reverted. If you store sensitive data in a repository, such as a private SSH key, confidential personnal information, passwords, etc. You will not be able to delete it entirely because of the tracking feature that allows to revert any changes. You will have to delete the entire repository, especially if it is public, as any random bot will sniff everything and scam you as soon as possible.
+Each GitHub repository should contain a documentation. A `README.md` explaining the purpose of the program and its main features is the minimum you can do. What you are reading is an example of `README.md`. Because it is written in markdown, you can structure it with titles, *format* **text**, insert [hyperlinks](https://www.youtube.com/watch?v=dQw4w9WgXcQ). More importantly you can write nice $\LaTeX$ equations ($U=RI$, $\frac{1}{2}mv^2$), which is very convenient to explain scientific code ! Do it.
+
+There are few **<span style="color:red; font-size:18px">security</span>** concerns regarding the use of repositories. Every change is visible by the users of the repository and they can be reverted. If you store sensitive data in a repository, such as a private SSH key, confidential personnal information, passwords, etc. You will not be able to delete it entirely because of the tracking feature that allows to revert any changes. You will have to delete the entire repository, especially if it is public, as any random bot will sniff everything and scam you as soon as possible.
 
 Do not store data on repositories. Indeed, because of this tracking functionnality, the repository will keep this heavy data in the history. So anyone working with the repository, will have to download it when cloning it locally. Repositories are not USB keys, it is a place to hold a program.
 
