@@ -42,11 +42,86 @@ As a scholar, Github provides an access to its GitHub copilot AI that can be imp
 
 In this section we will see what is Python, how to install and use it. The course will be the opportunity to get familiar with Python itself and practice the main features of Python. This is a nice introductory course to programming language in general.
 
-Python is a free and open-source programming language widely used in a very broad range of fields such as web development, data science, artificial intelligence, scientific computing, graphical interface, command control, and much more ! Anything is possible with Python ! Due to its simplicity and readability, its huge active community, Python is ideal to learn programming in general.
+Python is a free and open-source programming language widely used in a very broad range of fields such as web development, data science, artificial intelligence, scientific computing, graphical interface, command control, and much more ! Anything is possible with Python ! Due to its simplicity and readability, its huge active community, Python is ideal to learn programming in general. Keep in mind this is not the fastest language when it commes to many High-Performance Computing (HPC), so always search for already existing codes that is optimised when you lean towards this part of applications (molecular dynamics, fluidics, optimisation ...). Otherwise, switch to a faster language such as ForTran or C.
+
+### Installation
+
+Python programs need an interpreter, i.e a software that reads and executes Python code. This interpreter is often provided as part of a Python distribution or environment. To run Python code on your computer, you first need to install such an interpreter.
+
+For scientific work, it’s best to use an environment manager, which helps you install, update, and isolate different versions of Python and scientific libraries. The most popular choices are Anaconda or [Miniconda](https://www.anaconda.com/download/success), which come with many scientific packages preinstalled and make environment management easier.
+
+I advice you start with miniconda, and integrate the modules in the environment as you need them. Once installed, you can open an anaconda prompt. It is like any terminal except you have the base environment activated which allow you to run python programs. I advice you set up an environment with your desired version of Python using a command line such as
+
+```bash
+conda create -n myenv python=3.10
+```
+
+then activate the environment using
+
+```bash
+conda activate myenv
+```
+
+and install any package using `pip`
+
+```bash
+pip install numpy
+```
+
+For scientific work you should have at least `numpy`, `matplotlib` and `scipy`.
+
+### First run of a Python program
+
+You can execute the two following programs by typing in a terminal
+
+```bash
+python3 <name_of_program.py>
+```
+
+`10_Python_First_steps.py` is about installing python and running the first python program. Try to execute this program. You will also learn about the basics of the Python programming language.
+
+`11_Python_Language.py` is about the Python language and tells you all the things you need to know to get started.
+
+If you are not familiar with command line this is where I advice you install an Integrated Developping Environment. This is a text editor connected to the Python compiler. [Visual Studio Code](https://code.visualstudio.com/) is excellent ! It lets you select the python environment and run code with just a simple shortcut (`ctrl + F5`).
+
+Then I show two other ways to execute Python program, also compatible with VSCode. They allow you to execute only parts of the program : ideal when you want to test things during the development of a program.
+
+You can run interactve python following `12_Interactive_python.py`. This is a normal text file where the code is split into cells using `# %%`. You can then run cells independetly while the output is displayed in a separate window. This resemble `Spyder` and `Matlab` for those who know.
+
+You can run jupyter notebooks following `13_Jupyter_notebook.ipynb`. It is very similar to interactive pythonn except here cells are explicited. Also nice during development and so on, and you can put markdown and figures nicely, so when you save the file it keeps in memory the figures and so on.
 
 ## 20 Intermediary Python
 
 In this section we will discuss Python functionnalities oriented towards scientific concerns.
+
+Data is an important element of the work of a scientist. From how you generate and analyse data depends the quality of their work. `21_Save_Load_file_Dice.py` deals with saving and loading data in a consistent way while `22_Plot_Dice.py` deals with plotting such data.
+
+More advanced in the Python domain, few other programs are about using functions and classes. They are very usefull as they help structure the code and make it more efficient. See `24_Lambda_Functions.py` and `25_Class_definition.py` for more details.
+
+Also, the way you define your variables may affect the performance of your code, and sometimes you want to save some precious seconds, minutes, or even more. `27_Perf_test.py` illustrates how simple differences can change execution time.
+
+## 30 Python numericals
+
+Scientists use various tools to process and interpret data. An example is the Fast Fourier Transform (FFT), [one of the most impactful algorithm](https://www.youtube.com/watch?v=nmgFG7PUHfo). But plenty of other tools have their relevance such as the Hilbert transform, Laplace transform, frequency filters, or statistical analysis. There are no needs to re write such algorithm as they are already implemented in the libraries such as `numpy` or `scipy`. This section covers the use of such algorithms for greater good.
+
+There is also some tedious mathematical work that python can carry out for you, such as fitting the data with an analytical formula, handling errorbars or symbolic computation. Symbolic computation allows for the manipulation of analytical expression. With symbolic computation you can substitue terms, derive or integrate, handle systems of equation or solve polynomials. These symbolic computtions are harvested in order to propagate uncertainties, solve equations and carry out a Taylor expansion.
+
+# 40 Molecular dynamics
+
+Molecular dynamics is about determining the acceleration, velocity and position of particles in conditions where forces are known. This usually relies on initial values being interpolated to a next time step using integrations algorithms such as velocity-Verlet or Runge-Kutta. `scipy` proposes a very convenient way to carry out this procedure through its function `ivp_solve`. `42_ivp_solve_test.py` provides a nice example of its use.
+
+# 50 Slurm cluster
+
+Slurm is a load manager used on HPC servers. It allocates resources to tasks and handle waiting lists. This is an important feature when it comes to run its heavy computations on a remote server.
+
+`51_job_start.sh` and `52_job_start_2.sh` are two bash programs that order to start the execution of programs on a slurm server. Contact the local administrator of the slurm server (Micheal Devereux) for more informations.
+
+# Other things to develop
+
+For the time being, the following elements are not developped in this tutorial, but we can discuss about it upon reasonable request :
+
+- Multi-objective optimisation
+- Graphical interface for command control
 
 ## List of contributors
 * Adrien Poindron
