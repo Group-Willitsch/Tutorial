@@ -36,7 +36,7 @@ Also, GitHub is not a proper backup solution. You should always keep a backup so
 
 ### GitHub Copilot AI
 
-As a scholar, Github provides an access to its GitHub copilot AI that can be implemented in an editor such as Visual Studio Code (VSC). VSC is a nice editor that I recommend. Do not overuse AI, AI is stupid.
+As a scholar, Github provides an access to its GitHub copilot AI that can be implemented in an editor such as Visual Studio Code (VSC). VSC is a nice editor that I recommend. Do not rely naively on AI : AI stupid, AI evil, AI replace you soon.
 
 ## 10 Introduction to Python
 
